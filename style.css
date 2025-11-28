@@ -1,0 +1,200 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* CHANGED: Light Lavender color instead of plain white */
+    background-color: #f8f0ff; 
+    padding: 1rem 5%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    /* CHANGED: Allows content to wrap for mobile layout */
+    flex-wrap: wrap; 
+}
+
+/* If you are using text logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #8e44ad; /* Lavender/Purple */
+}
+
+/* If you are using the image logo class from before, keep this too */
+.logo-image-link {
+    display: flex;
+    align-items: center;
+}
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555; /* Slightly softer black for better contrast */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #8e44ad;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    /* Using a calming nature placeholder image */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #8e44ad;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #732d91;
+}
+
+.btn-secondary {
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 2px solid #8e44ad;
+    color: #8e44ad;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.btn-secondary:hover {
+    background-color: #8e44ad;
+    color: white;
+}
+
+/* --- API QUOTE SECTION --- */
+.quotes-section {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.quote-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fdfbff; /* Matching light theme */
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#quote-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 2rem auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* --- UPDATED MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo on top of links */
+        padding: 1rem;
+    }
+
+    .nav-links {
+        /* CHANGED: Removed 'display: none' so links are visible */
+        display: flex; 
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 { font-size: 2rem; }
+    
+    .contact-form { width: 100%; }
+}
